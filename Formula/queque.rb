@@ -15,14 +15,16 @@ end
 
   desc "Your in terminal ai helper"
   homepage "https://github.com/k-leumas/queque"
-  url "https://github.com/k-leumas/queque/archive/refs/tags/v0.2.9.tar.gz"
-  sha256 "23041f24747e633c50bb2efe07e3c34c5302cd621eb071fbc976acf0f1bf0c96"
+  url "https://github.com/k-leumas/queque/archive/refs/tags/v0.2.10.tar.gz"
+  sha256 "8ca3fd2f1280e5857a07a7665f75023185efb8b63b7c8c2bb26464fed31e4b17"
 
   depends_on "jq"
   depends_on "node"
 
   def install
-    system "npm", "install", *std_npm_args
+    system "npm", "install"
+system "node_modules/.bin/tsup"
+system "npm", "install", *std_npm_args
 bin.install_symlink libexec/"lib/node_modules/@k-leumas/queque-cli/dist/cli/main.js" => "qq"
 (share/"queque").install "shell/zsh/queque.zsh"
   end
