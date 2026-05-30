@@ -21,8 +21,6 @@ class Queque < Formula
         export ANTHROPIC_API_KEY="sk-ant-..."
 
       Then reload: source ~/.zshrc
-
-      QueQue uses Zellij for its floating pane UI (install: brew install zellij).
     EOS
   end
 
