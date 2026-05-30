@@ -5,10 +5,11 @@
 class Queque < Formula
   desc "Your in terminal ai helper"
   homepage "https://github.com/k-leumas/queque"
-  url "https://github.com/k-leumas/queque/archive/refs/tags/v0.2.4.tar.gz"
-  sha256 "52983baba997608b0b62ff7398c3a3beed0bc6c2abf87c7b0b1c1781254aa904"
+  url "https://github.com/k-leumas/queque/archive/refs/tags/v0.2.5.tar.gz"
+  sha256 "3dce0f385ec4f453c3c78edc59d391ae56b3e395aac87c36f1b1144fbabde4e5"
 
-  depends_on "node", "jq"
+  depends_on "jq"
+  depends_on "node"
 
   def install
     system "npm", "install", *std_npm_args
