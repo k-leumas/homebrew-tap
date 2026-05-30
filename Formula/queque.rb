@@ -17,7 +17,7 @@ class Queque < Formula
     <<~EOS
       Add the following to your ~/.zshrc:
 
-        source #{opt_libexec}/shell/zsh/qq.zsh
+        eval "$(qq init zsh)"
         export ANTHROPIC_API_KEY="sk-ant-..."
 
       Then reload: source ~/.zshrc
