@@ -5,8 +5,8 @@
 class Queque < Formula
   desc "Your in terminal ai helper"
   homepage "https://github.com/k-leumas/queque"
-  url "https://github.com/k-leumas/queque/archive/refs/tags/v0.2.3.tar.gz"
-  sha256 "c7d745ff146ca52fe21876beeba8d9bd4de277b4a9a480f5307421375fac6f99"
+  url "https://github.com/k-leumas/queque/archive/refs/tags/v0.2.4.tar.gz"
+  sha256 "52983baba997608b0b62ff7398c3a3beed0bc6c2abf87c7b0b1c1781254aa904"
 
   depends_on "node", "jq"
 
