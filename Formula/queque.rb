@@ -12,6 +12,7 @@ class Queque < Formula
   def install
     system "npm", "install", *std_npm_args
     bin.install_symlink Dir["#{libexec}/bin/*"]
+    (share/"queque").install "shell/zsh/queque.zsh"
   end
 
   def caveats
