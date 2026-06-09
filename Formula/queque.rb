@@ -20,8 +20,8 @@ end
 
   desc "Your in terminal ai helper"
   homepage "https://github.com/k-leumas/queque"
-  url "https://github.com/k-leumas/queque/archive/refs/tags/v0.3.5.tar.gz"
-  sha256 "5ea59b27e67ea780c15122c87028d422543fed892b8724b6396b5628b530aaa9"
+  url "https://github.com/k-leumas/queque/archive/refs/tags/v0.3.6.tar.gz"
+  sha256 "acdc3c425d14cf8f0f3c073d36fb212a875500a9f1c855513be81f148c60d0f3"
 
   depends_on "jq"
   depends_on "node"
