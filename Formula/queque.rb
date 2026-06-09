@@ -18,10 +18,10 @@ class Queque < Formula
   EOS
 end
 
-  desc "Your in terminal ai helper"
+  desc "Your terminal prompt's future -- get command suggestions right under your termin"
   homepage "https://github.com/k-leumas/queque"
-  url "https://github.com/k-leumas/queque/archive/refs/tags/v0.3.8.tar.gz"
-  sha256 "c0917b301cd1aee09b5e603c19451150c9087a13aaa4eba6c4ba6c5e72943d84"
+  url "https://github.com/k-leumas/queque/archive/refs/tags/v0.3.9.tar.gz"
+  sha256 "f77ad3cf647c32e3f77884e4400f4581289e75b6a916c08015bd6b443a61a80d"
 
   depends_on "jq"
   depends_on "node"
