@@ -5,18 +5,23 @@
 class Queque < Formula
   def caveats
   <<~EOS
-    To enable the ?? trigger, add the shell integration to your .zshrc:
-      qq init zsh >> ~/.zshrc
-      source ~/.zshrc
-    Then set your Anthropic API key:
-      export ANTHROPIC_API_KEY="sk-ant-..."
+    ==> Get started with queque
+
+      Step 1 — activate the ?? trigger:
+        qq init zsh >> ~/.zshrc && source ~/.zshrc
+
+      Step 2 — add your Anthropic API key to ~/.zshrc:
+        export ANTHROPIC_API_KEY="sk-ant-..."
+
+      Then open a new terminal and try:
+        git log??
   EOS
 end
 
   desc "Your in terminal ai helper"
   homepage "https://github.com/k-leumas/queque"
-  url "https://github.com/k-leumas/queque/archive/refs/tags/v0.3.3.tar.gz"
-  sha256 "989382a618f5fa4c4e6ebb45d546f1dd4810e3aa1309e3d983a9fadc0a577b77"
+  url "https://github.com/k-leumas/queque/archive/refs/tags/v0.3.4.tar.gz"
+  sha256 "2533214721e6c82c15a4725ac337e0f17476e96dd569abe62308273965e89d98"
 
   depends_on "jq"
   depends_on "node"
