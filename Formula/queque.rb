@@ -18,10 +18,10 @@ class Queque < Formula
   EOS
 end
 
-  desc "Your terminal prompt's future -- get command suggestions right under your termin"
+  desc "Copy-pasting shell commands is dead welcome to the future"
   homepage "https://github.com/k-leumas/queque"
-  url "https://github.com/k-leumas/queque/archive/refs/tags/v0.3.9.tar.gz"
-  sha256 "f77ad3cf647c32e3f77884e4400f4581289e75b6a916c08015bd6b443a61a80d"
+  url "https://github.com/k-leumas/queque/archive/refs/tags/v0.4.0.tar.gz"
+  sha256 "7541bcfd29b5cd7476a07826f84c6796ecd964f5b7e2219e585535264ee2876e"
 
   depends_on "jq"
   depends_on "node"
