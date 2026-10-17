@@ -7,21 +7,26 @@ class Queque < Formula
   <<~EOS
     ==> Get started with queque
 
-      Step 1 — activate the ?? trigger:
-        qq init zsh >> ~/.zshrc && source ~/.zshrc
+      Step 1 — connect QueQue to Claude (pick one):
+        Already use Claude Code? Sign in once, no API key needed:
+          claude /login
+        Or add an Anthropic API key to ~/.zshrc:
+          export ANTHROPIC_API_KEY="sk-ant-..."
 
-      Step 2 — add your Anthropic API key to ~/.zshrc:
-        export ANTHROPIC_API_KEY="sk-ant-..."
+      Step 2 — activate the ?? trigger:
+        qq init zsh && source ~/.zshrc
 
-      Then open a new terminal and try:
+      Then try:
         git log??
+
+      Details: https://github.com/k-leumas/queque#authentication
   EOS
 end
 
   desc "Copy-pasting shell commands is dead welcome to the future"
   homepage "https://github.com/k-leumas/queque"
-  url "https://github.com/k-leumas/queque/archive/refs/tags/v0.6.0.tar.gz"
-  sha256 "1cc42b7b21f44146b9dacfcf8ee70995bf8c8d5d53472109954f4d4a13282f4f"
+  url "https://github.com/k-leumas/queque/archive/refs/tags/v0.6.1.tar.gz"
+  sha256 "d5d9f4caf87511f20f7fd9b4ef7cdc6a6a3a9d5aad94bf59083f75f0c1d14c8b"
 
   depends_on "jq"
   depends_on "node"
