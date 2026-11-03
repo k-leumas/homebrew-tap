@@ -25,8 +25,8 @@ end
 
   desc "Copy-pasting shell commands is dead welcome to the future"
   homepage "https://github.com/k-leumas/queque"
-  url "https://github.com/k-leumas/queque/archive/refs/tags/v0.9.0.tar.gz"
-  sha256 "ae597d86b8973a42d13e67a8aabe2ba5f92a4a76ea7fd93effea54854e472fa6"
+  url "https://github.com/k-leumas/queque/archive/refs/tags/v0.9.1.tar.gz"
+  sha256 "3f8127d146e350223b1c93007b75019e7e16b1315fc6a0f9d71ead658f5ac57f"
 
   depends_on "jq"
   depends_on "node"
