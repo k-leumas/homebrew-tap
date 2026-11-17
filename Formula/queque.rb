@@ -26,10 +26,10 @@ class Queque < Formula
     EOS
   end
 
-  desc "Copy-pasting shell commands is dead. welcome to the future"
+  desc "Natural language in; shell command out; you press enter"
   homepage "https://github.com/k-leumas/queque"
-  url "https://github.com/k-leumas/queque/archive/refs/tags/v0.10.4.tar.gz"
-  sha256 "9fd9ccc49da45579252b451a5be59dfd7cb9ab156f0e85f3c2825ccb3f97db02"
+  url "https://github.com/k-leumas/queque/archive/refs/tags/v0.10.5.tar.gz"
+  sha256 "e6829e62886f8a842a354a15d65bfd38770e7f6f5f8202bb3f7a93b3be75dd6c"
 
   depends_on "jq"
   depends_on "node"
