@@ -10,11 +10,14 @@ class Queque < Formula
       Step 1 — connect QueQue to Claude (pick one):
         Already use Claude Code? Sign in once, no API key needed:
           claude /login
-        Or add an Anthropic API key to ~/.zshrc:
+        Or add an Anthropic API key to your shell rc file (~/.zshrc or ~/.bashrc):
           export ANTHROPIC_API_KEY="sk-ant-..."
 
-      Step 2 — activate the ?? trigger:
-        qq init zsh && source ~/.zshrc
+      Step 2 — activate the ?? trigger (qq init detects your shell):
+        qq init
+        then for zsh:  source ~/.zshrc
+        or for bash 5 or newer:  source ~/.bashrc
+        macOS /bin/bash is 3.2, too old for ??: brew install bash first
 
       Then try:
         git log??
@@ -25,8 +28,8 @@ end
 
   desc "Copy-pasting shell commands is dead welcome to the future"
   homepage "https://github.com/k-leumas/queque"
-  url "https://github.com/k-leumas/queque/archive/refs/tags/v0.9.2.tar.gz"
-  sha256 "76cc2c131662caf0bd4ca292ba823c60f61b81ad481078e9db50cc1d68535982"
+  url "https://github.com/k-leumas/queque/archive/refs/tags/v0.10.1.tar.gz"
+  sha256 "62f4bef7c24d3e8085eeec175e05cecc6a4b3a69a475cfac97fadb70766e13e0"
 
   depends_on "jq"
   depends_on "node"
@@ -37,6 +40,7 @@ system "node_modules/.bin/tsup"
 system "npm", "install", *std_npm_args, "--loglevel=error"
 bin.install_symlink libexec/"lib/node_modules/@k-leumas/queque-cli/dist/cli/main.js" => "qq"
 (share/"queque").install "shell/zsh/queque.zsh"
+(share/"queque").install "shell/bash/queque.bash"
   end
 
   test do
