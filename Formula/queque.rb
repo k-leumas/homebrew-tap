@@ -28,8 +28,8 @@ class Queque < Formula
 
   desc "Copy-pasting shell commands is dead. welcome to the future"
   homepage "https://github.com/k-leumas/queque"
-  url "https://github.com/k-leumas/queque/archive/refs/tags/v0.10.2.tar.gz"
-  sha256 "0f456a617bf76e73fc89199fe0f20577999e2ce821715615e5378a6b1f579f5b"
+  url "https://github.com/k-leumas/queque/archive/refs/tags/v0.10.3.tar.gz"
+  sha256 "4c74e134098305b7f7190e765a5883f764d44a0ae17334e4e147b2a383f4a886"
 
   depends_on "jq"
   depends_on "node"
