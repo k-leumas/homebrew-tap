@@ -28,17 +28,22 @@ class Queque < Formula
 
   desc "Natural language in; shell command out; you press enter"
   homepage "https://github.com/k-leumas/queque"
-  url "https://github.com/k-leumas/queque/archive/refs/tags/v0.10.5.tar.gz"
-  sha256 "e6829e62886f8a842a354a15d65bfd38770e7f6f5f8202bb3f7a93b3be75dd6c"
+  url "https://github.com/k-leumas/queque/archive/refs/tags/v0.10.6.tar.gz"
+  sha256 "8bed7ec83e416e32d5aed91f073d73a5ad162add504ede4e0ffd734960def8af"
 
   depends_on "jq"
-  depends_on "node"
+  depends_on "node@24"
 
   def install
+    ENV.prepend_path "PATH", Formula["node@24"].opt_bin
     system "npm", "install", "--ignore-scripts", "--loglevel=error"
     system "node_modules/.bin/tsup"
     system "npm", "install", *std_npm_args, "--loglevel=error"
-    bin.install_symlink libexec/"lib/node_modules/@k-leumas/queque-cli/dist/cli/main.js" => "qq"
+    (bin/"qq").write <<~SH
+      #!/bin/bash
+      exec "#{Formula["node@24"].opt_bin}/node" "#{libexec}/lib/node_modules/@k-leumas/queque-cli/dist/cli/main.js" "$@"
+    SH
+    chmod 0755, bin/"qq"
     (share/"queque").install "shell/zsh/queque.zsh"
     (share/"queque").install "shell/bash/queque.bash"
   end
