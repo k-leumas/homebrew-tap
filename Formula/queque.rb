@@ -28,8 +28,8 @@ class Queque < Formula
 
   desc "Natural language in; shell command out; you press enter"
   homepage "https://github.com/k-leumas/queque"
-  url "https://github.com/k-leumas/queque/archive/refs/tags/v0.10.7.tar.gz"
-  sha256 "f5024ad584ff613c16384af9b924127ec282c54d14533aaf40f3919551285b12"
+  url "https://github.com/k-leumas/queque/archive/refs/tags/v0.11.0.tar.gz"
+  sha256 "d6a896698f759ffe520fd127b15b848dcda781a74f59d850b99503e9c03cc0ce"
 
   depends_on "jq"
   depends_on "node@24"
@@ -39,6 +39,7 @@ class Queque < Formula
     system "npm", "install", "--ignore-scripts", "--loglevel=error"
     system "node_modules/.bin/tsup"
     system "npm", "install", *std_npm_args, "--loglevel=error"
+    (libexec/"lib/node_modules/@k-leumas/queque-cli/.install-source").write '{"source":"homebrew","upgrade":"brew upgrade queque"}'
     (bin/"qq").write <<~SH
       #!/bin/bash
       exec "#{Formula["node@24"].opt_bin}/node" "#{libexec}/lib/node_modules/@k-leumas/queque-cli/dist/cli/main.js" "$@"
