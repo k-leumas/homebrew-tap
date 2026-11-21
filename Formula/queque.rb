@@ -28,8 +28,8 @@ class Queque < Formula
 
   desc "Natural language in; shell command out; you press enter"
   homepage "https://github.com/k-leumas/queque"
-  url "https://github.com/k-leumas/queque/archive/refs/tags/v0.11.4.tar.gz"
-  sha256 "1a82c02edcd5f01dcd80c1ef1f30d88e9cf143b7983a1f6e25d53b145effde89"
+  url "https://github.com/k-leumas/queque/archive/refs/tags/v0.11.5.tar.gz"
+  sha256 "56f75294f50339b0cde1b67cc6dd09ad563db558e49301e0081a9e8eb1d62e3f"
 
   depends_on "jq"
   depends_on "node@24"
